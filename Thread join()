@@ -1,0 +1,20 @@
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Task 1 Completed");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            MyThread t1 = new MyThread();
+            t1.start();
+            t1.join();   // Wait until t1 finishes
+
+            System.out.println("Task 2 Started After Task 1");
+        }
+        catch (InterruptedException e) {
+            System.out.println("Interrupted");
+        }
+    }
+}
