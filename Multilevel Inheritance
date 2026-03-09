@@ -1,0 +1,24 @@
+class Person {
+    void show() {
+        System.out.println("Person");
+    }
+}
+
+class Student extends Person {
+    void study() {
+        System.out.println("Student studies");
+    }
+}
+
+class Graduate extends Student {
+    void degree() {
+        System.out.println("Graduate Degree");
+    }
+
+    public static void main(String[] args) {
+        Graduate g = new Graduate();
+        g.show();
+        g.study();
+        g.degree();
+    }
+}
